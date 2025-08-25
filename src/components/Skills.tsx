@@ -3,7 +3,7 @@ import { Code, Database, FileCode, Wrench } from 'lucide-react';
 import { useEffect, useState } from 'react';
 
 const skillsData = {
-  frontend: ['JavaScript', 'HTML5', 'CSS3', 'Tailwind CSS', 'Vue.js'],
+  frontend: ['JavaScript', 'HTML5', 'CSS3', 'Tailwind CSS'],
   backend: ['Node.js', 'Python', 'REST APIs', 'GraphQL', 'MongoDB'],
   tools: ['Git', 'VS Code', 'Linux', 'Postman'],
   languages: ['JavaScript', 'Python', 'C++', 'SQL', 'PHP']
