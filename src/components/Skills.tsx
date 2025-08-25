@@ -1,12 +1,12 @@
-import { useEffect, useState } from 'react';
 import { useLanguage } from '@/contexts/LanguageContext';
-import { Code, Database, Wrench, FileCode } from 'lucide-react';
+import { Code, Database, FileCode, Wrench } from 'lucide-react';
+import { useEffect, useState } from 'react';
 
 const skillsData = {
-  frontend: ['React', 'TypeScript', 'JavaScript', 'HTML5', 'CSS3', 'Tailwind CSS', 'Vue.js'],
-  backend: ['Node.js', 'Python', 'Java', 'Express.js', 'REST APIs', 'GraphQL', 'MongoDB'],
-  tools: ['Git', 'Docker', 'AWS', 'VS Code', 'Linux', 'Figma', 'Postman'],
-  languages: ['JavaScript', 'TypeScript', 'Python', 'Java', 'C++', 'SQL', 'PHP']
+  frontend: ['JavaScript', 'HTML5', 'CSS3', 'Tailwind CSS', 'Vue.js'],
+  backend: ['Node.js', 'Python', 'REST APIs', 'GraphQL', 'MongoDB'],
+  tools: ['Git', 'VS Code', 'Linux', 'Postman'],
+  languages: ['JavaScript', 'Python', 'C++', 'SQL', 'PHP']
 };
 
 const SkillCard = ({ icon: Icon, title, skills, delay = 0 }: {
