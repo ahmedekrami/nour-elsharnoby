@@ -1,0 +1,6 @@
+/* Modern Portfolio Styles - All styles are now in the design system */
+/* This file can remain minimal as we use Tailwind and our design system */
+
+.portfolio-container {
+  scroll-behavior: smooth;
+}

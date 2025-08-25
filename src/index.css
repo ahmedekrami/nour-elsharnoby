@@ -1,0 +1,335 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Portfolio Design System - Blue Glowing Theme */
+
+@layer base {
+  :root {
+    /* Light Theme - Blue Glowing Portfolio */
+    --background: 0 0% 100%;
+    --foreground: 210 40% 8%;
+    
+    /* Blue Glow Color Palette */
+    --blue-primary: 217 91% 60%;
+    --blue-secondary: 217 91% 70%;
+    --blue-glow: 217 91% 85%;
+    --blue-dark: 217 91% 45%;
+    
+    /* Card System */
+    --card: 0 0% 100%;
+    --card-foreground: 210 40% 8%;
+    --card-glow: 217 91% 60%;
+    
+    /* Interactive Elements */
+    --primary: 217 91% 60%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 217 91% 85%;
+    
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 210 40% 8%;
+    
+    --accent: 217 91% 95%;
+    --accent-foreground: 217 91% 45%;
+    
+    --muted: 210 40% 96%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    
+    --border: 217 91% 90%;
+    --input: 217 91% 95%;
+    --ring: 217 91% 60%;
+    
+    /* Glowing Effects */
+    --glow-small: 0 0 10px hsl(var(--blue-primary) / 0.3);
+    --glow-medium: 0 0 20px hsl(var(--blue-primary) / 0.4);
+    --glow-large: 0 0 40px hsl(var(--blue-primary) / 0.5);
+    --glow-intense: 0 0 60px hsl(var(--blue-primary) / 0.6);
+    
+    /* Gradients */
+    --gradient-blue: linear-gradient(135deg, hsl(var(--blue-primary)), hsl(var(--blue-secondary)));
+    --gradient-glow: linear-gradient(135deg, hsl(var(--blue-primary) / 0.1), hsl(var(--blue-glow) / 0.2));
+    
+    --radius: 0.75rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    /* Dark Theme - Blue Glowing Portfolio */
+    --background: 210 40% 8%;
+    --foreground: 0 0% 95%;
+    
+    /* Blue Glow Color Palette (Enhanced for dark) */
+    --blue-primary: 217 91% 65%;
+    --blue-secondary: 217 91% 75%;
+    --blue-glow: 217 91% 80%;
+    --blue-dark: 217 91% 50%;
+    
+    /* Card System */
+    --card: 210 40% 12%;
+    --card-foreground: 0 0% 95%;
+    --card-glow: 217 91% 65%;
+    
+    /* Interactive Elements */
+    --primary: 217 91% 65%;
+    --primary-foreground: 210 40% 8%;
+    --primary-glow: 217 91% 80%;
+    
+    --secondary: 210 40% 15%;
+    --secondary-foreground: 0 0% 95%;
+    
+    --accent: 210 40% 18%;
+    --accent-foreground: 217 91% 70%;
+    
+    --muted: 210 40% 15%;
+    --muted-foreground: 215 20.2% 65%;
+    
+    --border: 210 40% 20%;
+    --input: 210 40% 18%;
+    --ring: 217 91% 65%;
+    
+    /* Enhanced Glowing Effects for Dark Mode */
+    --glow-small: 0 0 15px hsl(var(--blue-primary) / 0.4);
+    --glow-medium: 0 0 25px hsl(var(--blue-primary) / 0.5);
+    --glow-large: 0 0 45px hsl(var(--blue-primary) / 0.6);
+    --glow-intense: 0 0 70px hsl(var(--blue-primary) / 0.7);
+    
+    /* Dark Mode Gradients */
+    --gradient-blue: linear-gradient(135deg, hsl(var(--blue-primary)), hsl(var(--blue-secondary)));
+    --gradient-glow: linear-gradient(135deg, hsl(var(--blue-primary) / 0.2), hsl(var(--blue-glow) / 0.3));
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer components {
+  /* Glowing Text Effects */
+  .glow-text {
+    text-shadow: var(--glow-small);
+    transition: text-shadow 0.3s ease;
+  }
+  
+  .glow-text:hover {
+    text-shadow: var(--glow-medium);
+  }
+  
+  .glow-text-intense {
+    text-shadow: var(--glow-large);
+    transition: text-shadow 0.3s ease;
+  }
+  
+  .glow-text-intense:hover {
+    text-shadow: var(--glow-intense);
+  }
+  
+  /* Glowing Card Effects */
+  .glow-card {
+    box-shadow: var(--glow-small);
+    transition: all 0.3s ease;
+    border: 1px solid hsl(var(--primary) / 0.2);
+  }
+  
+  .glow-card:hover {
+    box-shadow: var(--glow-medium);
+    border-color: hsl(var(--primary) / 0.4);
+    transform: translateY(-5px);
+  }
+  
+  /* Navigation Glow */
+  .nav-glow {
+    background: var(--gradient-blue);
+    box-shadow: var(--glow-small);
+  }
+  
+  /* Profile Image Glow */
+  .profile-glow {
+    border-radius: 50%;
+    box-shadow: var(--glow-medium);
+    transition: all 0.4s ease;
+  }
+  
+  .profile-glow:hover {
+    box-shadow: var(--glow-intense);
+    transform: scale(1.05);
+  }
+  
+  /* Underline Animation */
+  .glow-underline {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .glow-underline::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 3px;
+    bottom: -5px;
+    left: 50%;
+    background: var(--gradient-blue);
+    box-shadow: var(--glow-small);
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+  }
+  
+  .glow-underline:hover::after {
+    width: 100%;
+  }
+  
+  /* Gradient Text */
+  .gradient-text {
+    background: var(--gradient-blue);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200% 200%;
+    animation: gradient-shift 3s ease-in-out infinite;
+  }
+  
+  /* Social Icons */
+  .social-icon {
+    transition: all 0.3s ease;
+    border-radius: 50%;
+    padding: 0.75rem;
+    background: hsl(var(--card));
+    border: 1px solid hsl(var(--border));
+  }
+  
+  .social-icon:hover {
+    background: var(--gradient-blue);
+    box-shadow: var(--glow-medium);
+    transform: translateY(-3px) rotate(5deg);
+    color: white;
+  }
+  
+  /* Floating Animation */
+  .float-animation {
+    animation: float 3s ease-in-out infinite;
+  }
+  
+  /* Background Pattern */
+  .coding-bg {
+    background-image: 
+      radial-gradient(circle at 20% 50%, hsl(var(--primary) / 0.1) 0%, transparent 50%),
+      radial-gradient(circle at 80% 20%, hsl(var(--primary) / 0.1) 0%, transparent 50%),
+      radial-gradient(circle at 40% 80%, hsl(var(--primary) / 0.1) 0%, transparent 50%);
+    position: relative;
+  }
+  
+  .coding-bg::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: 
+      linear-gradient(90deg, hsl(var(--primary) / 0.05) 1px, transparent 1px),
+      linear-gradient(180deg, hsl(var(--primary) / 0.05) 1px, transparent 1px);
+    background-size: 20px 20px;
+    pointer-events: none;
+  }
+}
+
+@layer utilities {
+  /* Animation Keyframes */
+  @keyframes gradient-shift {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+  }
+  
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+  }
+  
+  @keyframes glow-pulse {
+    0%, 100% { 
+      box-shadow: var(--glow-small);
+      opacity: 1;
+    }
+    50% { 
+      box-shadow: var(--glow-large);
+      opacity: 0.8;
+    }
+  }
+  
+  @keyframes slide-in-up {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes slide-in-left {
+    from {
+      opacity: 0;
+      transform: translateX(-30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes slide-in-right {
+    from {
+      opacity: 0;
+      transform: translateX(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  /* Animation Classes */
+  .animate-slide-up {
+    animation: slide-in-up 0.6s ease-out;
+  }
+  
+  .animate-slide-left {
+    animation: slide-in-left 0.6s ease-out;
+  }
+  
+  .animate-slide-right {
+    animation: slide-in-right 0.6s ease-out;
+  }
+  
+  .animate-glow-pulse {
+    animation: glow-pulse 2s ease-in-out infinite;
+  }
+  
+  /* Delay Classes */
+  .delay-100 { animation-delay: 100ms; }
+  .delay-200 { animation-delay: 200ms; }
+  .delay-300 { animation-delay: 300ms; }
+  .delay-400 { animation-delay: 400ms; }
+  .delay-500 { animation-delay: 500ms; }
+}
